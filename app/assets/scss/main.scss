@@ -1,0 +1,130 @@
+//
+//	Main Scss Imports
+//	------------------------------
+//
+
+// Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/functions";
+@import "helpers/helpers";
+@import "helpers/animations";
+
+// Base
+@import "base/typography";
+@import "base/typography";
+
+// Components
+@import "components/buttons";
+@import "components/carousel";
+@import "components/cover";
+@import "components/dropdown";
+@import "components/navigation";
+
+// Layout
+@import "layout/footer";
+@import "layout/forms";
+@import "layout/grid";
+@import "layout/header";
+@import "layout/sidebar";
+
+// Pages
+@import "pages/contact";
+@import "pages/home";
+
+// Themes
+@import "themes/admin";
+@import "themes/theme";
+
+// Vendors
+@import "vendors/bootstrap";
+@import "vendors/mustache";
+
+
+%random-color{
+	@include random-animate(40, color, 20s ease-in-out infinite, 3, random-color, (1, 1, 1), 1);
+}
+
+$item-spacing-bottom: 25px;
+
+.main-header-wrap{
+	position: relative;
+	height: 100%;
+	height: 100vh;
+	&.oldie{
+		height: 800px;
+	}
+	overflow: hidden;
+}
+
+.main-header{
+	position: absolute;
+	width: 100%;
+	height: 99vh;
+	left: 0;
+	right: 0;
+	top: 0;
+	display: table;
+	&.oldie{
+		height: 800px;
+	}
+	.main-header-text{
+		display: table-cell; 
+  		vertical-align: middle; 
+  		text-align: center; 
+	}
+	h1{
+		font-family: 'league_spartanregular';
+		font-size: 100px;
+		text-transform: uppercase;
+		@extend %random-color;
+		letter-spacing: 2px;
+		line-height: 1em;
+		margin: 0;
+		margin-bottom: $item-spacing-bottom;
+	}
+	p{	
+		font-family: 'Lora';
+		font-style: italic;
+		font-size: 26px;
+		line-height: 1em;
+		margin: 0 0 $item-spacing-bottom;
+		@media (max-width: $screen-sm-max) {
+			font-size: 2rem;
+		}
+	}
+}
+
+.first-up{
+	@extend .bounce-up-in;
+	@extend .animated;
+	-webkit-animation-delay: 800ms;
+}
+
+.second-up{
+	@extend .bounce-up-in;
+	@extend .animated;
+	-webkit-animation-delay: 1100ms;
+}
+
+.third-up{
+	@extend .bounce-up-in;
+	@extend .animated;
+	-webkit-animation-delay: 950ms;
+}
+
+.list-social{
+	margin: 0 0 $item-spacing-bottom;
+	li{
+		font-size: 34px;
+		line-height: 1em;
+		a{
+			@extend %random-color;
+			&:hover{
+				opacity: 0.8;
+			}
+			
+		}
+	}
+}
+
