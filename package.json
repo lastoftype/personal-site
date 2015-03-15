@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-copy": "^0.8.0",
     "grunt-contrib-cssmin": "~0.11.0",
     "grunt-contrib-sass": "~0.8.1",
     "grunt-contrib-uglify": "^0.7.0",
@@ -14,6 +15,8 @@
   },
   "devDependencies": {
     "grunt-autoprefixer": "^2.2.0",
+    "jit-grunt": "^0.9.1",
+    "load-grunt-config": "^0.16.0",
     "time-grunt": "^1.1.0"
   }
 }
