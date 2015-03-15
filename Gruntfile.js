@@ -8,9 +8,6 @@ module.exports = function(grunt) {
     // automates grunt task adding
     require('jit-grunt')(grunt);
 
-    // outputs process time in terminal
-    require('time-grunt')(grunt);
-
     // expand on utitilies
     var _ = grunt.util._,
         path = require('path'),
