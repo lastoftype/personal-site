@@ -7,6 +7,6 @@ $ npm install && bower install
 ```
 Then Grunt it all together
 ```
-$ grunt
+$ grunt build
 ```
 That should do it!
